@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mtr_mk_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:hint="@string/meter_Make"
+        app:counterEnabled="true"
+        app:helperText="Select Meter Make">
+
+        <AutoCompleteTextView
+            android:id="@+id/mtr_mk_list_AutoC"
+            android:inputType="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="@integer/material_motion_duration_short_1"
+            android:maxLines="@integer/material_motion_duration_short_1"
+            android:padding="20dp"
+            android:textSize="20sp">
+
+        </AutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- User input for Meter Serial No-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mtr_serN_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="@string/meter_Serial_no"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterTextAppearance="@integer/material_motion_duration_short_1">
+
+
+        <EditText
+            android:id="@+id/mtr_SerialNo_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:padding="20dp"
+            android:textSize="20sp"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+  <!-- Submit Button -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="SUBMIT"
+        android:textSize="20sp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="8dp"
+        android:id="@+id/submitted_Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="SUBMITTED DATA"
+        android:textSize="20sp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <ListView
+        android:id="@+id/submit_LV"
+        android:layout_width="match_parent"
+        android:layout_height="418dp"
+        android:orientation="vertical" />
+
+    </LinearLayout>
+
+
+</ScrollView>
